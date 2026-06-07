@@ -1,0 +1,1 @@
+/Users/kangzengchen/source/buka/buka-works/intent-router/target/debug/libintent_router.rlib: /Users/kangzengchen/source/buka/buka-works/intent-router/target/package/intent-router-0.1.0/src/lib.rs /Users/kangzengchen/source/buka/buka-works/intent-router/target/package/intent-router-0.1.0/src/router.rs
