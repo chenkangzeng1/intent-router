@@ -410,7 +410,7 @@ fn test_complex_cascading_scenario() {
 
 #[cfg(feature = "rule")]
 mod rule_integration {
-    use intent_router::rule::RuleHandler;
+    use intent_router::builtin::rule::RuleHandler;
     use intent_router::{Router, RoutingStrategy};
     use super::{Decision, KeywordHandler, fallback};
 
@@ -529,7 +529,7 @@ mod rule_integration {
 
 #[cfg(feature = "embedding")]
 mod embedding_integration {
-    use intent_router::embedding::EmbeddingHandler;
+    use intent_router::builtin::embedding::EmbeddingHandler;
     use intent_router::Router;
     use super::{Decision, fallback};
 
@@ -570,7 +570,7 @@ mod embedding_integration {
 
 #[cfg(feature = "local-model")]
 mod local_model_integration {
-    use intent_router::local_model::LocalModelHandler;
+    use intent_router::builtin::local_model::LocalModelHandler;
     use intent_router::Router;
     use super::{Decision, fallback};
 
@@ -607,7 +607,7 @@ mod local_model_integration {
 
 #[cfg(feature = "remote-model")]
 mod remote_model_integration {
-    use intent_router::remote_model::RemoteModelHandler;
+    use intent_router::builtin::remote_model::RemoteModelHandler;
     use intent_router::Router;
     use super::{Decision, fallback};
 
@@ -632,9 +632,9 @@ mod remote_model_integration {
 
 #[cfg(all(feature = "rule", feature = "local-model", feature = "remote-model"))]
 mod full_pipeline_integration {
-    use intent_router::local_model::LocalModelHandler;
-    use intent_router::remote_model::RemoteModelHandler;
-    use intent_router::rule::RuleHandler;
+    use intent_router::builtin::local_model::LocalModelHandler;
+    use intent_router::builtin::remote_model::RemoteModelHandler;
+    use intent_router::builtin::rule::RuleHandler;
     use intent_router::Router;
     use super::{Decision, fallback};
 

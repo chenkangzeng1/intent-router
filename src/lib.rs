@@ -1,15 +1,4 @@
 pub mod router;
-
-#[cfg(feature = "rule")]
-pub mod rule;
-
-#[cfg(feature = "embedding")]
-pub mod embedding;
-
-#[cfg(feature = "local-model")]
-pub mod local_model;
-
-#[cfg(feature = "remote-model")]
-pub mod remote_model;
+pub mod builtin;
 
 pub use router::{Handler, HandlerResult, Router, RoutingStrategy};
