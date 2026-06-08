@@ -1,6 +1,6 @@
 [package]
 name = "intent-router"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "Composable intent routing for Rust. Cascade from regex → embedding → local LLM → remote LLM with confidence-based short-circuiting. Zero business intrusion: you define logic, we orchestrate. Built for AI agent pipelines where latency and cost matter."
 license = "MIT"
@@ -9,3 +9,12 @@ keywords = ["intent", "routing", "ai", "agent", "llm"]
 categories = ["algorithms", "data-structures"]
 
 [dependencies]
+regex = { version = "1.0", optional = true }
+
+[features]
+default = ["rule"]
+rule = ["dep:regex"]
+embedding = []
+local-model = []
+remote-model = []
+full = ["rule", "embedding", "local-model", "remote-model"]
